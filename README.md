@@ -13,7 +13,7 @@ We cleaned two additional columns:
 ### Prediction problem
 We are trying to **predict minutes it takes to prepare a recipe**, which would be a type of **regression** problem as we want to figure out what number of minutes depends on. 
 ### Response variable
-  Our response variable is the **number of minutes per recipe**, and we chose **R^2** as a metric of evaluation because it measures the proportion of variance. Other potential metrics included Mean Squared Error, but this was prone to outliers and our minutes data ranged from 0 to 1 million minutes. R^2 also reports goodness of fit, so the closer to 1, the better the fit of the model. 
+  Our response variable is the **number of minutes per recipe**, and we chose **$R^2$** as a metric of evaluation because it measures the proportion of variance. Other potential metrics included Mean Squared Error, but this was prone to outliers and our minutes data ranged from 0 to 1 million minutes. $R^2$ also reports goodness of fit, so the closer to 1, the better the fit of the model. 
   We used information such as number of steps (`n_steps`), calories (`calories`), tags (`tags` with labels such as `"easy"`, `"for large groups"` etc.), and number of ingredients (`n_ingredients`). These are all information that can be acquired before calculating how long it takes to make a dish. Other columns such as ratings or reviews should be noted after minutes were recorded, so it doesn’t make sense to use them for prediction. 
 
 ## Baseline Model
@@ -25,6 +25,6 @@ We started off with a very basic model that used 2 features and fitted to a Line
 We mapped `calories` by negative square root function because when we plotted it, it appeared to be shaped in either a negative logarithmic or negative square root function. We chose to shape it to negative square root because `minutes` included values of 0, which would result in NaN when passed through log. 
 When we plotted `n_steps` against `minutes`, it appeared to be a fairly even distribution, thus in our baseline model we did not make any changes to that column.
 ### Evaluation of model performance
-Our baseline model reported an R^2 value of `0.00015936555775553085`, which means it is **not the best model** as it can only explain less than 0.001% of the variance. The R^2 value is fairly far from 1, which would indicate that it was far from a good fit. It seems like our model has a lot of space for improvement, as we should get a model with R^2 of something closer to 1. 
+Our baseline model reported an $R^2$ value of `0.00015936555775553085`, which means it is **not the best model** as it can only explain less than 0.001% of the variance. The $R^2$ value is fairly far from 1, which would indicate that it was far from a good fit. It seems like our model has a lot of space for improvement, as we should get a model with $R^2$ of something closer to 1. 
 ## Final Model
 ## Fairness Analysis
