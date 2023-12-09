@@ -11,7 +11,7 @@ We cleaned two additional columns:
 
 ## Problem Identification
 ### Prediction problem
-We are trying to **predict minutes it takes to prepare a recipe**, which would be a type of **regression** problem as we want to figure out what number of minutes depends on. 
+We are trying to **predict minutes it takes to prepare a recipe**, which would be a type of **regression** problem as we want to figure out what variables do number of minutes depend on. 
 ### Response variable
   Our response variable is the **number of minutes per recipe**, and we chose **$R^2$** as a metric of evaluation because it measures the proportion of variance. Other potential metrics included Mean Squared Error, but this was prone to outliers and our minutes data ranged from 0 to 1 million minutes. $R^2$ also reports goodness of fit, so the closer to 1, the better the fit of the model. 
   We used information such as number of steps (`n_steps`), calories (`calories`), tags (`tags` with labels such as `"easy"`, `"for large groups"` etc.), and number of ingredients (`n_ingredients`). These are all information that can be acquired before calculating how long it takes to make a dish. Other columns such as ratings or reviews should be noted after minutes were recorded, so it doesn’t make sense to use them for prediction. 
