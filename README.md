@@ -22,7 +22,7 @@ We started off with a very basic model that used 2 features and fitted to a Line
 1. `n_steps` is a quantitative, nominal feature (we are not ranking anything better because it has more steps)
 2. `calories` is a continuous quantitative, nominal  feature, as having more calories does not necessarily make it have more minutes to prepare a dish.
 ### Encoding of features
-We mapped `calorie`s by negative square root function because when we plotted it, it appeared to be shaped in either a negative logarithmic or negative square root function. We chose to shape it to negative square root because `minutes` included values of 0, which would result in NaN when passed through log. 
+We mapped `calories` by negative square root function because when we plotted it, it appeared to be shaped in either a negative logarithmic or negative square root function. We chose to shape it to negative square root because `minutes` included values of 0, which would result in NaN when passed through log. 
 When we plotted `n_steps` against `minutes`, it appeared to be a fairly even distribution, thus in our baseline model we did not make any changes to that column.
 ### Evaluation of model performance
 Our baseline model reported an R^2 value of `0.00015936555775553085`, which means it is **not the best model** as it can only explain less than 0.001% of the variance. The R^2 value is fairly far from 1, which would indicate that it was far from a good fit. It seems like our model has a lot of space for improvement, as we should get a model with R^2 of something closer to 1. 
