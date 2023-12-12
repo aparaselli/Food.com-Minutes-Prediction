@@ -40,7 +40,7 @@ After analyzing the 568 unique tags we ended using: `for-large-groups`, `for-lar
 #### Model Selection
 We tried two modeling algorithms: Linear Regression and Decision Tree Regressor. We selected Decision Tree Regressor for its higher R-squared value when ran with the same features.
 #### Hyperparameter Selection
-FOr our hyperparamter selection, we manually ran the training and test set data iteratively to find the best max depth. We identified the best max depth as **5** at the cutoff of the graph below.
+For our hyperparamter selection, we manually ran the training and test set data iteratively to find the best max depth. We identified the best max depth as **5** at the cutoff of the graph below.
 ### Evaluation Of Model Performance
 Our Decision Tree Regressor with a max depth of 5 had an $R^2$ of ___. This value is significantly closer to 1, signifying a somewhat good fit
 #### Comparison to Baseline Model
