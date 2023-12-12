@@ -33,7 +33,8 @@ Our final model had a total of 4 features and was fitted to a **Decision Tree Re
 2. For `calories`, a continuous quantitative, nominal feature, we quantile transformed the data as we knew that calories had extreme outliers (ranging from 0 to ~45k).
 Thus, we wanted to use QuantileTransformer to reduce the impact of outliers.
 3. Performed One-Hot Encoding with the `tags` column (all quanlitataive, categorical values) through CountVectorizer. We wanted to account for the meaningfulness of certain tags (ex: we predicted that tags that have the word `"easy"` may result in shorter cooking time, while tags like `“for larger groups”` may be longer because it prepares more food.) CountVectorizer performs a bag of words encoding, which returns something similar to One-Hot Encoding even for our list of words.
-  *After analyzing the 568 unique tags we ended using: `for-large-groups`, `for-large-groups-holiday-event`, `for-1-or-2`, `desserts-easy`, `easy`, `no-cook`, `snack`, `snacks-kid-friendly`. If they did have the tag, it was labeled 1; if not, it was labeled 0.
+
+After analyzing the 568 unique tags we ended using: `for-large-groups`, `for-large-groups-holiday-event`, `for-1-or-2`, `desserts-easy`, `easy`, `no-cook`, `snack`, `snacks-kid-friendly`. If they did have the tag, it was labeled 1; if not, it was labeled 0.
 
 ### Modeling Algorithm
 #### Model Selection
