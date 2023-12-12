@@ -4,7 +4,7 @@ By Jennifer Hung & Athulith Paraselli
 As college students who are both working and studying at the same time, finding time to cook can be difficult and time-consuming in itself. We wanted to see what variables affect how long it takes for a dish to be made, and perhaps help other students take into consideration when allocating time to prepare a meal. Thus, we ask the question of what predicts the number of minutes per recipe?
 
 ## Data Cleaning
-Our dataset is scraped from food.com, and we went through the same cleaning process as we did in Project 3 (linked [here](https://github.com/aparaselli/Food.com-Rating-Analysis.git).) 
+Our dataset is scraped from food.com, and we went through the same cleaning process as we did in Project 3 ([Click here to read!](https://github.com/aparaselli/Food.com-Rating-Analysis.git).) 
 We cleaned two additional columns:
 1. Turned `tags` into lists of strings because it was initially all `str` values,
 2. Changed `submitted` into datetime for easier analysis.
