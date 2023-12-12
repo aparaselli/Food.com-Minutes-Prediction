@@ -57,6 +57,9 @@ For our evaluation metric, we used $RMSE$ to evaluate both Group X and Y's model
 **Alternative Hypothesis:** Our model is unfair. There is a difference between the $RMSE$ made before and after 2014.
 
 The test statistic we selected was the **absolute difference of RMSE** because our alternative hypothesis is a two-tailed test on quantitative data.
+The observed difference in $RMSE$ is:_____
 
 From our graph above, we see that our p-value equates to ___, which means we **fail to reject the null** at the significance level of `0.05`.
+
+We can conclude that there is no difference in model performance between recipes created before and after 2014. 
 
