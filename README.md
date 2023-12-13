@@ -55,6 +55,7 @@ For our hyperparamter selection, we manually ran the training and test set data 
 |           8 |       0.605176  |      0.606451  |
 |           9 |       0.593303  |      0.591631  |
 |          10 |       0.517932  |      0.524379  |
+
 (Figure 1)
 
 <iframe src="assets/OptimalHyperParams.html" width=800 height=600 frameBorder=0></iframe>
