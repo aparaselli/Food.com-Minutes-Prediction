@@ -42,6 +42,7 @@ After analyzing the 568 unique tags we ended using the following 8 tags: `for-la
 We tried two modeling algorithms: Linear Regression and Decision Tree Regressor. We selected Decision Tree Regressor for its higher $R^2$ value when ran with the same features (test trial on max-depth of 3).
 #### Hyperparameter Selection
 For our hyperparamter selection, we manually ran the training and test set data iteratively to find the best max depth and criterion. We identified the criterion as **friedman_mse** as it perfomed a bit better on average (as seen in Figure 1), while the best max-depth as **5** at the cutoff of the graph below (Figure 2). 
+
 (Figure 1)
 
 |   Max_Depth |   squared_error |   friedman_mse |
