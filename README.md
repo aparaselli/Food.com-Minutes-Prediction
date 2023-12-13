@@ -42,6 +42,7 @@ After analyzing the 568 unique tags we ended using the following 8 tags: `for-la
 We tried two modeling algorithms: Linear Regression and Decision Tree Regressor. We selected Decision Tree Regressor for its higher $R^2$ value when ran with the same features (test trial on max-depth of 3).
 #### Hyperparameter Selection
 For our hyperparamter selection, we manually ran the training and test set data iteratively to find the best max depth and criterion. We identified the criterion as **friedman_mse** as it perfomed a bit better on average (as seen in Figure 1), while the best max-depth as **5** at the cutoff of the graph below (Figure 2). 
+(Figure 1)
 
 |   Max_Depth |   squared_error |   friedman_mse |
 |------------:|----------------:|---------------:|
@@ -56,10 +57,10 @@ For our hyperparamter selection, we manually ran the training and test set data 
 |           9 |       0.593303  |      0.591631  |
 |          10 |       0.517932  |      0.524379  |
 
-(Figure 1)
+(Figure 2)
 
 <iframe src="assets/OptimalHyperParams.html" width=800 height=600 frameBorder=0></iframe>
-(Figure 2)
+
 
 ### Evaluation Of Model Performance
 Our Decision Tree Regressor with a max-depth of 5 had an $R^2$ of `0.07029746244938351`. This value is still far from a good fit of 1, which indicates our Final Model still has room for improvement.
@@ -80,8 +81,9 @@ For our evaluation metric, we used $RMSE$ to evaluate both Group X and Y's model
 The test statistic we selected was the **absolute difference of $RMSE$** because our alternative hypothesis is a two-tailed test on quantitative data.
 The observed absolute difference in $RMSE$ is: `414.8822267940934`
 
-<iframe src="assets/PermutationTest.html" width=800 height=600 frameBorder=0></iframe>
 (Figure 3)
+
+<iframe src="assets/PermutationTest.html" width=800 height=600 frameBorder=0></iframe>
 
 From our graph above, we see that our p-value equates to `0.826`, which means we **fail to reject the null** at the significance level of 0.05.
 
