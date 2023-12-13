@@ -20,8 +20,8 @@ We are trying to **predict minutes it takes to prepare a recipe**, which would b
 ## Baseline Model
 We started off with a very basic model that used 2 features and fitted to a **Linear Regression** model.
 ### Features
-1. `n_steps` is a quantitative, nominal feature (we are not ranking anything better because it has more steps)
-2. `calories` is a continuous quantitative, nominal feature, as having more calories does not necessarily make it have more minutes to prepare a dish.
+1. `n_steps` is a **quantitative, nominal** feature (we are not ranking anything better because it has more steps)
+2. `calories` is a continuous **quantitative, nominal** feature, as having more calories does not necessarily make it have more minutes to prepare a dish.
 ### Encoding Of Features
 We mapped `calories` by negative square root function because when we plotted it, it appeared to be shaped in either a negative logarithmic or negative square root function. We chose to shape it to negative square root because `minutes` included values of 0, which would result in NaN when passed through log. 
 When we plotted `n_steps` against `minutes`, it appeared to be a fairly even distribution, thus in our baseline model we did not make any changes to that column.
@@ -30,10 +30,10 @@ Our baseline model reported an $R^2$ value of `0.0007803710374110207`, which mea
 ## Final Model
 Our final model had a total of 4 features and was fitted to a **Decision Tree Regressor** model.
 ### Added Features
-1. Standard scaling of `n_steps` and `n_ingredients` (both quantitative, nomial features) because we wanted to ensure the evenness of distribution of values through standardization. 
-2. For `calories`, a continuous quantitative, nominal feature, we quantile transformed the data as we knew that calories had extreme outliers (ranging from 0 to ~45k).
+1. Standard scaling of `n_steps` and `n_ingredients` (both **quantitative, nominal** features) because we wanted to ensure the evenness of distribution of values through standardization. 
+2. For `calories` (continuous **quantitative, nominal** feature) we quantile transformed the data as we knew that calories had extreme outliers (ranging from 0 to ~45k).
 Thus, we wanted to use QuantileTransformer to reduce the impact of outliers.
-3. Performed One-Hot Encoding with the `tags` column (all quanlitataive, categorical values) through CountVectorizer. We wanted to account for the meaningfulness of certain tags (ex: we predicted that tags that have the word `"easy"` may result in shorter cooking time, while tags like `“for larger groups”` may be longer because it prepares more food.) CountVectorizer performs a bag of words encoding, which returns something similar to One-Hot Encoding for our list of words.
+3. Performed One-Hot Encoding with the `tags` column (all **qualitative, categorical** values) through CountVectorizer. We wanted to account for the meaningfulness of certain tags (ex: we predicted that tags that have the word `"easy"` may result in shorter cooking time, while tags like `“for larger groups”` may be longer because it prepares more food.) CountVectorizer performs a bag of words encoding, which returns something similar to One-Hot Encoding for our list of words.
 
 After analyzing the 568 unique tags we ended using the following 8 tags: `for-large-groups`, `for-large-groups-holiday-event`, `for-1-or-2`, `desserts-easy`, `easy`, `no-cook`, `snack`, `snacks-kid-friendly`. If the recipe had the tag, it was labeled 1 for that tag; if not, it was labeled 0.
 
