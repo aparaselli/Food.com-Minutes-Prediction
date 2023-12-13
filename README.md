@@ -59,7 +59,6 @@ For our hyperparamter selection, we manually ran the training and test set data 
 (Figure 1)
 
 <iframe src="assets/OptimalHyperParams.html" width=800 height=600 frameBorder=0></iframe>
-
 (Figure 2)
 
 ### Evaluation Of Model Performance
@@ -82,7 +81,6 @@ The test statistic we selected was the **absolute difference of $RMSE$** because
 The observed absolute difference in $RMSE$ is: `414.8822267940934`
 
 <iframe src="assets/PermutationTest.html" width=800 height=600 frameBorder=0></iframe>
-
 (Figure 3)
 
 From our graph above, we see that our p-value equates to `0.826`, which means we **fail to reject the null** at the significance level of 0.05.
