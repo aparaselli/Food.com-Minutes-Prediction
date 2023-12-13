@@ -63,5 +63,5 @@ The observed difference in $RMSE$ is: ``
 
 From our graph above, we see that our p-value equates to ``, which means we **fail to reject the null** at the significance level of 0.05.
 
-We can tentatively conclude that there is no difference in model performance between recipes created before and after 2014. However, we cannot 100% prove that it is completely fair.
+We can tentatively conclude that there is no difference in model performance between recipes created before and after 2014. However, we cannot 100% prove that it is completely fair across both groups.
 
